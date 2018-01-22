@@ -12,24 +12,24 @@ Due to the nature of github, and the 100+ MB nature of the pre-trained networks,
 ### Landscape GAN
 ![Batch of Landscapes](https://raw.githubusercontent.com/robbiebarrat/art-DCGAN/master/images/landscapenet_waifu2x.png)
 #### Download the weights!
-##### [Generator](https://drive.google.com/open?id=0B-_m9VM1w1bKUFBmV09VOWlmNG8)
+##### [Generator](https://drive.google.com/open?id=0B-_m9VM1w1bKUFBmV09VOWlmNG8) [(CPU)](https://drive.google.com/open?id=1HqoHuH1cefPN1A9i6j_CjbCuoQy_hpG1)
 
-##### [Discriminator](https://drive.google.com/open?id=0B-_m9VM1w1bKaC1MRkNiMHp0VHM)
+##### [Discriminator](https://drive.google.com/open?id=0B-_m9VM1w1bKaC1MRkNiMHp0VHM) [(CPU)](https://drive.google.com/open?id=1wz0Ke0TL8J9x2AkfpYTBII0UfO_OPVgH)
 
 ### Nude-Portrait GAN
 ![Batch of Nude-Portraits](https://raw.githubusercontent.com/robbiebarrat/art-DCGAN/master/images/nudenet_waifu2x.png)
 #### Download the weights!
-##### [Generator](https://drive.google.com/open?id=0B-_m9VM1w1bKdFJkdUFlNFRGRVE)
+##### [Generator](https://drive.google.com/open?id=0B-_m9VM1w1bKdFJkdUFlNFRGRVE) [(CPU)](https://drive.google.com/open?id=1WfGaeEMNgMp355J194NnfRr8TqHSlvVd)
 
-##### [Discriminator](https://drive.google.com/open?id=0B-_m9VM1w1bKUjdrckNQeGZqME0)
+##### [Discriminator](https://drive.google.com/open?id=0B-_m9VM1w1bKUjdrckNQeGZqME0) [(CPU)](https://drive.google.com/open?id=1bOLqlIsXrOYYxfQnwgNQloCy4D0p7bBe)
 
 
 ### Portrait GAN
 ![Batch of Portraits](https://raw.githubusercontent.com/robbiebarrat/art-DCGAN/master/images/portraitnet_waifu2x.png)
 #### Download the weights
-##### [Generator](https://drive.google.com/open?id=0B-_m9VM1w1bKUXhmazg2eVF0bTA)
+##### [Generator](https://drive.google.com/open?id=0B-_m9VM1w1bKUXhmazg2eVF0bTA) [(CPU)](https://drive.google.com/open?id=1Ul9poUdKBSdyb6IAJlSXBP8zVOVpzHBT)
 
-##### [Discriminator](https://drive.google.com/open?id=0B-_m9VM1w1bKMVh4S21BNlhzNEE)
+##### [Discriminator](https://drive.google.com/open?id=0B-_m9VM1w1bKMVh4S21BNlhzNEE) [(CPU)](https://drive.google.com/open?id=1KJMUW0sOZ3CRjshCEsJPd76DN4GT6Otv)
 
 ## The most notable changes are:
 * Doubled image size - now 128x128 instead of 64x64 (added a layer in both networks)
@@ -38,7 +38,9 @@ Due to the nature of github, and the 100+ MB nature of the pre-trained networks,
 
 * Included a simple shell script that will keep your checkpoint reasonably empty - it is meant for leaving running when training a GAN. Default behavior is to keep the most recent 5 checkpoints of both the discriminator and generator for each different experiment name.
 
-* Added a python 3 script (genre-scraper.py) that allows easy image-scraping from wikiart into the format the GAN can draw from.
+* Added a python 3 script (utils/genre-scraper.py) that allows easy image-scraping from wikiart into the format the GAN can draw from.
+
+* Added a script (utils/gpu2cpu.lua) that converts checkpoints trained on a gpu to models that can be used by a cpu.
 
 * The inclusion of multiple pre-trained GAN's (.t7 files) that can generate various types of images, including 128x128 landscape oil paintings, 128x128 nude oil paintings, and others highlighted below.
 
